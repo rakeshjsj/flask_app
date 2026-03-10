@@ -1,6 +1,6 @@
 pipeline {
-    agent any
-
+    agent { label 'slave2' }
+    
     environment {
         APP_NAME              = 'ip-app-python-flask'
         DOCKER_REGISTRY       = 'your-registry.io'

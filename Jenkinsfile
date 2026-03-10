@@ -28,6 +28,7 @@ pipeline {
                                  
                                 url: 'https://github.com/rakeshjsj/flask_app.git'
                             ]]
+                       ])
             }
         }
 

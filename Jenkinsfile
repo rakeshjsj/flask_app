@@ -21,7 +21,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                checkout ([ $class: 'GitSCM',
+                            branches: [[name: '*/main']], 
+                            extensions: [], 
+                            userRemoteConfigs: [[
+                                 
+                                url: 'https://github.com/rakeshjsj/flask_app.git'
+                            ]]
             }
         }
 
